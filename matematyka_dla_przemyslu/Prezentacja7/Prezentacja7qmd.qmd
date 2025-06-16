@@ -1,0 +1,64 @@
+---
+title: "Matematyczne modelowanie procesów decyzyjnych w finansach"
+author: "Rafał Głodek, Joanna Kusy, Oliwia Makuch, Tomasz Srebniak"
+format:
+  revealjs:
+    scrollable: true
+    transition: slide
+    theme: serif
+    self-contained: true
+    header-includes:
+      - |
+        <style>
+          .justified-text {
+            text-align: justify;
+          }
+          .reveal section {
+              padding-right: 30px; /* Dodaj margines po prawej stronie */
+            }
+        </style>
+title-slide-attributes:
+    data-background-image: "images/img_prezentacja2.jpg"
+    data-background-size: cover
+    data-background-opacity: "0.65"
+    data-background-color: "#000000"
+jupyter: python3
+---
+
+## Prezentacja 1
+
+## Prezentacja 3
+## Pyfolio
+:::: {.columns}
+
+::: {.column width="50%"}
+![](images/pyfolio.png){fig-align="center" width="75%"}
+
+- Raportowanie wyników strategii inwestycyjnych w Pythonie
+:::
+
+::: {.column width="50%"}
+![](images/pyfolio_ss){fig-align="center" width="75%"}
+:::
+::::
+
+
+
+## Prezentacja 5
+
+## Ocena wydajności modelu {.smaller}
+
+- Testowanie istotności parametrów
+- Walidacja założeń modelu:
+  - Wykres residuów
+  - Autokorelacja residuów - wykres ACF
+  - Test Ljung-Boxa
+- Miary dopasowania modelu:
+  - Akaike Information Criterion (AIC)
+  - Bayesian Information Criterion (BIC)
+- Backtesting modelu GARCH(1,1):
+  - Mean Absolute Error (MAE)
+  - Root Mean Squared Error (RMSE)
+- Implementacja modelu GARCH z procesem ARMA dla średniej
+
+  
