@@ -97,7 +97,7 @@ t
 mcnemar.test(t)
 ```
 
-Na poziomie istotności $\alpha = 0.05$ nie mamy podstaw do odrzucenia hipotezy zerowej o symetrii. Zakładamy, że leki są jednakowo skuteczne.
+Na poziomie istotności $\alpha = 0.05$ nie mamy podstaw do odrzucenia hipotezy zerowej o symetrii. W przypadku tabel I=2 symetria jest równoważna z jednorodnością rozkładów brzegowych. Zakładamy, że leki są jednakowo skuteczne.
 
 ### Warunkowy test symetrii
 
@@ -105,7 +105,7 @@ Na poziomie istotności $\alpha = 0.05$ nie mamy podstaw do odrzucenia hipotezy 
 symmetry_test(t)
 ```
 
-Na poziomie istotności $\alpha = 0.05$ nie mamy podstaw do odrzucenia hipotezy zerowej o symetrii. Zakładamy, że leki są jednakowo skuteczne.
+Na poziomie istotności $\alpha = 0.05$ nie mamy podstaw do odrzucenia hipotezy zerowej o symetrii. W przypadku tabel I=2 symetria jest równoważna z jednorodnością rozkładów brzegowych. Zakładamy, że leki są jednakowo skuteczne.
 
 ## Zadanie 3
 
@@ -225,7 +225,7 @@ t <- table(ankieta$CZY_ZADOW, ankieta$CZY_ZADOW_2)
 mcnemar.test(t)
 ```
 
-Na poziomie istotności $\alpha = 0.05$ odrzucamy hipotezę zerową na rzecz hipotezy alternatywnej. Zakładamy, że zadowolenie ze szkoleń w pierwszym badanym okresie i w drugim badanym okresie nie odpowiada modelowi symetrii. Na podstawie uzyskanych wyników możemy wnioskować, że poziom zadowolenia ze szkoleń uległ zmianie.
+Na poziomie istotności $\alpha = 0.05$ odrzucamy hipotezę zerową na rzecz hipotezy alternatywnej. Zakładamy, że zadowolenie ze szkoleń w pierwszym badanym okresie i w drugim badanym okresie nie odpowiada modelowi symetrii. Dla tabel I=2 jest to równoważne z brakiem jednorodności rozkładów brzegowych. Na podstawie uzyskanych wyników możemy wnioskować, że poziom zadowolenia ze szkoleń uległ zmianie.
 
 ## Zadanie 5
 
@@ -267,7 +267,7 @@ IW_test <- function(t) {
 IW_test(t)
 ```
 
-Na poziomie istotności $\alpha = 0.05$ nie mamy podstaw do odrzucenia hipotezy zerowej o symetrii. Zakładamy, że odpowiedzi w pierwszym badanym okresie i w drugim okresie odpowiadają modelowi symetrii. Na podstawie uzyskanych wyników możemy przyjąć hipotezę, że ocena podejścia firmy nie uległa zmianie.
+Na poziomie istotności $\alpha = 0.05$ nie mamy podstaw do odrzucenia hipotezy zerowej o symetrii. Zakładamy, że odpowiedzi w pierwszym badanym okresie i w drugim okresie odpowiadają modelowi symetrii. Symetria implikuje jednorodność rozkładów brzegowych. Na podstawie uzyskanych wyników możemy przyjąć hipotezę, że ocena podejścia firmy nie uległa zmianie.
 
 # Część III
 
@@ -383,7 +383,7 @@ Zmienna **CZY_KIER** jest niezależna od zmiennych **PYT_2** i **STAŻ**. Zmienn
 
 ## Zadanie 8
 
-Rozważono dwa modele log-liniowy [123] i [12 23] dla zmiennych opisanych w zadaniu 7 oszacowano prawdopobiebieństwa:
+Dla zmiennych opisanych w zadaniu 7 rozważono dwa modele log-liniowe: [123] i [12 23]. Za ich pomocą oszacowano następujące prawdopobiebieństwa:
 
 -   że osoba pracująca na stanowisku kierowniczym jest zdecydowanie zadowolona ze szkoleń;
 
@@ -580,7 +580,7 @@ df <- an$Df[2]
 p_value <- 1 - pchisq(deviance, df)
 ```
 
-P--value uzyskane w teście wynosi `r round(p_value, 4)`. Na poziomie istotności $\alpha = 0.05$ odrzucamy hipotezę zerową na rzecz hipotezy alternatywnej. Zakładamy, że zmienne losowe **CZY_KIER**, **PYT_2** i **STAŻ** są nie wzajemnie niezależne.
+P--value uzyskane w teście wynosi `r round(p_value, 4)`. Na poziomie istotności $\alpha = 0.05$ odrzucamy hipotezę zerową na rzecz hipotezy alternatywnej. Zakładamy, że zmienne losowe **CZY_KIER**, **PYT_2** i **STAŻ** nie są wzajemnie niezależne.
 
 #### Nadmodel [13 23] \
 \
@@ -599,7 +599,7 @@ df <- an$Df[2]
 p_value <- 1 - pchisq(deviance, df)
 ```
 
-P--value uzyskane w teście wynosi `r round(p_value, 4)`. Na poziomie istotności $\alpha = 0.05$ odrzucamy hipotezę zerową na rzecz hipotezy alternatywnej. Zakładamy, że zmienne losowe **CZY_KIER**, **PYT_2** i **STAŻ** są nie wzajemnie niezależne.
+P--value uzyskane w teście wynosi `r round(p_value, 4)`. Na poziomie istotności $\alpha = 0.05$ odrzucamy hipotezę zerową na rzecz hipotezy alternatywnej. Zakładamy, że zmienne losowe **CZY_KIER**, **PYT_2** i **STAŻ** nie są wzajemnie niezależne.
 
 #### Nadmodel [12 13] \
 \
@@ -618,7 +618,7 @@ df <- an$Df[2]
 p_value <- 1 - pchisq(deviance, df)
 ```
 
-P--value uzyskane w teście wynosi `r round(p_value, 4)`. Na poziomie istotności $\alpha = 0.05$ odrzucamy hipotezę zerową na rzecz hipotezy alternatywnej. Zakładamy, że zmienne losowe **CZY_KIER**, **PYT_2** i **STAŻ** są nie wzajemnie niezależne.
+P--value uzyskane w teście wynosi `r round(p_value, 4)`. Na poziomie istotności $\alpha = 0.05$ odrzucamy hipotezę zerową na rzecz hipotezy alternatywnej. Zakładamy, że zmienne losowe **CZY_KIER**, **PYT_2** i **STAŻ** nie są wzajemnie niezależne.
 
 ### Zmienna losowa **PYT_2** jest niezależna od pary zmiennych **CZY_KIER** i **STAŻ**
 
